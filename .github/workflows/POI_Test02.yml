@@ -14,7 +14,8 @@ jobs:
       with:
         dotnet-version: '3.1.x'
     - name: Install dependencies
-      run: dotnet restore /apis/poi/poi.sln
+      working-directory: ./apis/poi/
+      run: dotnet restore
     - name: Build
       run: dotnet build
     - name: Test with the dotnet CLI
