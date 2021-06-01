@@ -3,7 +3,7 @@ on:
   push:
     paths:    
         # Push events to branches matching refs/heads/mona/octocat
-      - 'apis/poi/'
+      - 'poi/**'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
