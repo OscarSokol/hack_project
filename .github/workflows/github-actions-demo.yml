@@ -1,5 +1,11 @@
 name: GitHub Actions Demo
-on: [push]
+on: 
+  push:
+    branches:    
+      # Push events on main branch
+      - master
+      # Push events to branches matching refs/heads/mona/octocat
+      - 'apis/poi/'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
