@@ -1,6 +1,9 @@
 name: POI Test
-on: [pull_request]
-
+on: 
+  pull_request:
+    paths:    
+        # Push events to branches matching refs/heads/mona/octocat
+      - '**/poi/**'
 jobs:
   build:
 
