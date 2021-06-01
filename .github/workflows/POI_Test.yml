@@ -1,4 +1,4 @@
-name: POI Test
+name: POI_Test
 on: [push]
 
 jobs:
