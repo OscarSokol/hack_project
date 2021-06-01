@@ -14,7 +14,7 @@ jobs:
       with:
         dotnet-version: '3.1.x'
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore /apis/poi/tests/UnitTests/UnitTests.csproj
     - name: Build
       run: dotnet build
     - name: Test with the dotnet CLI
