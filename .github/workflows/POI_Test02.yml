@@ -31,12 +31,12 @@ jobs:
       if: failure()
       with:
        OrganizationName: "stefanstranger"
-       PAT: "l66pwbvjwpjpfhlwfmb5zf77qodtyeqee2w7wir4zdxbquh6ge3a"
-       ProjectName: "Contoso"
-       AreaPath: "Contoso\\Automation"
-       IterationPath: "Contoso"
-       GithubToken: "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"
-       WorkflowFileName: "error.yml"
+       PAT: "PAT"
+       ProjectName: "project02"
+       AreaPath: "project02"
+       IterationPath: "project02\\Sprint 1"
+       GithubToken: "GithubToken"
+       WorkflowFileName: "POI_Test02.yml"
       env:
        PAT: ${{ secrets.PAT}}
        GithubToken: ${{ secrets.githubtoken}}
