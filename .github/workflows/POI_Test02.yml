@@ -31,11 +31,11 @@ jobs:
       if: failure()
       with:
        OrganizationName: "stefanstranger"
-       PAT: "PAT"
+       PAT: "l66pwbvjwpjpfhlwfmb5zf77qodtyeqee2w7wir4zdxbquh6ge3a"
        ProjectName: "Contoso"
        AreaPath: "Contoso\\Automation"
        IterationPath: "Contoso"
-       GithubToken: "GithubToken"
+       GithubToken: "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"
        WorkflowFileName: "error.yml"
       env:
        PAT: ${{ secrets.PAT}}
