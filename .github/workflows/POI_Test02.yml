@@ -30,7 +30,7 @@ jobs:
       uses: stefanstranger/azuredevops-bug-action@1.1
       if: failure()
       with:
-       OrganizationName: "stefanstranger"
+       OrganizationName: "hacker2mt8"
        PAT: "PAT"
        ProjectName: "project02"
        AreaPath: "project02"
