@@ -25,3 +25,18 @@ jobs:
     - name: Test with the dotnet CLI
       working-directory: ./apis/poi/tests/UnitTests/
       run: dotnet test
+      
+    - name: The job has failed
+      uses: stefanstranger/azuredevops-bug-action@1.1
+      if: failure()
+      with:
+       OrganizationName: "stefanstranger"
+       PAT: "PAT"
+       ProjectName: "Contoso"
+       AreaPath: "Contoso\\Automation"
+       IterationPath: "Contoso"
+       GithubToken: "GithubToken"
+       WorkflowFileName: "error.yml"
+      env:
+       PAT: ${{ secrets.PAT}}
+       GithubToken: ${{ secrets.githubtoken}}
