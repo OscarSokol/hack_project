@@ -8,8 +8,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
-  
+    
     steps:
     - uses: actions/checkout@v2
     - name: Setup dotnet
@@ -23,14 +22,14 @@ jobs:
       run: dotnet build
       working-directory: ./apis/poi/
     - name: Test with the dotnet CLI
-      working-directory: ./apis/poi/tests/UnitTest/
+      working-directory: ./apis/poi/tests/UnitTests/
       run: dotnet test
       
     - name: The job has failed
       uses: stefanstranger/azuredevops-bug-action@1.1
       if: failure()
       with:
-       OrganizationName: "stefanstranger"
+       OrganizationName: "hacker2mt8"
        PAT: "PAT"
        ProjectName: "project02"
        AreaPath: "project02"
