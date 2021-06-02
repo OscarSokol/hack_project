@@ -1,0 +1,28 @@
+name: Error
+
+on: [push]
+
+jobs:
+  error:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Throw error in PowerShell script
+        run: |
+          throw 'something failed';
+      - name: The job has failed
+        uses: stefanstranger/azuredevops-bug-action@1.1
+        if: failure()
+        with:
+          OrganizationName: "hacker2mt8"
+          PAT: "PAT"
+          ProjectName: "project02"
+          AreaPath: "project02"
+          IterationPath: "Sprint 1"
+          GithubToken: "GithubToken"
+          WorkflowFileName: "POI_Test02.yml"
+        env:
+          PAT: ${{ secrets.PAT}} 
+          GithubToken: ${{ secrets.githubtoken}}
+
