@@ -23,7 +23,7 @@ jobs:
       run: dotnet build
       working-directory: ./apis/poi/
     - name: Test with the dotnet CLI
-      working-directory: ./apis/poi/tests/UnitTests/
+      working-directory: ./apis/poi/tests/UnitTest/
       run: dotnet test
       
     - name: The job has failed
